@@ -8,10 +8,12 @@
 import SwiftUI
 
 @main
-struct SwiftUI_WebviewApp: App {
+struct SwiftUI_WebViewApp: App {
+    private var webviewModel = WebViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(webviewModel)
         }
     }
 }

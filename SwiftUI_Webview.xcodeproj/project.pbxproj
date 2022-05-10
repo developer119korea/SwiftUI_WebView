@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DAC1F3E6282A54B800B3B122 /* SwiftUI_WebviewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC1F3E5282A54B800B3B122 /* SwiftUI_WebviewApp.swift */; };
+		DAC1F3E6282A54B800B3B122 /* SwiftUI_WebViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC1F3E5282A54B800B3B122 /* SwiftUI_WebViewApp.swift */; };
 		DAC1F3E8282A54B800B3B122 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC1F3E7282A54B800B3B122 /* ContentView.swift */; };
 		DAC1F3EA282A54B900B3B122 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAC1F3E9282A54B900B3B122 /* Assets.xcassets */; };
 		DAC1F3ED282A54B900B3B122 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAC1F3EC282A54B900B3B122 /* Preview Assets.xcassets */; };
+		DAC1F3F4282A58DE00B3B122 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC1F3F3282A58DE00B3B122 /* WebView.swift */; };
+		DAC1F3F6282A78A800B3B122 /* MyTextAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC1F3F5282A78A800B3B122 /* MyTextAlertView.swift */; };
+		DAC1F3F8282AAABF00B3B122 /* WebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC1F3F7282AAABF00B3B122 /* WebViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DAC1F3E2282A54B800B3B122 /* SwiftUI_Webview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_Webview.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DAC1F3E5282A54B800B3B122 /* SwiftUI_WebviewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_WebviewApp.swift; sourceTree = "<group>"; };
+		DAC1F3E2282A54B800B3B122 /* SwiftUI_WebView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_WebView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAC1F3E5282A54B800B3B122 /* SwiftUI_WebViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_WebViewApp.swift; sourceTree = "<group>"; };
 		DAC1F3E7282A54B800B3B122 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DAC1F3E9282A54B900B3B122 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAC1F3EC282A54B900B3B122 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DAC1F3F3282A58DE00B3B122 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		DAC1F3F5282A78A800B3B122 /* MyTextAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextAlertView.swift; sourceTree = "<group>"; };
+		DAC1F3F7282AAABF00B3B122 /* WebViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +49,7 @@
 		DAC1F3E3282A54B800B3B122 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DAC1F3E2282A54B800B3B122 /* SwiftUI_Webview.app */,
+				DAC1F3E2282A54B800B3B122 /* SwiftUI_WebView.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,8 +57,11 @@
 		DAC1F3E4282A54B800B3B122 /* SwiftUI_Webview */ = {
 			isa = PBXGroup;
 			children = (
-				DAC1F3E5282A54B800B3B122 /* SwiftUI_WebviewApp.swift */,
+				DAC1F3E5282A54B800B3B122 /* SwiftUI_WebViewApp.swift */,
 				DAC1F3E7282A54B800B3B122 /* ContentView.swift */,
+				DAC1F3F7282AAABF00B3B122 /* WebViewModel.swift */,
+				DAC1F3F5282A78A800B3B122 /* MyTextAlertView.swift */,
+				DAC1F3F3282A58DE00B3B122 /* WebView.swift */,
 				DAC1F3E9282A54B900B3B122 /* Assets.xcassets */,
 				DAC1F3EB282A54B900B3B122 /* Preview Content */,
 			);
@@ -70,9 +79,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DAC1F3E1282A54B800B3B122 /* SwiftUI_Webview */ = {
+		DAC1F3E1282A54B800B3B122 /* SwiftUI_WebView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DAC1F3F0282A54B900B3B122 /* Build configuration list for PBXNativeTarget "SwiftUI_Webview" */;
+			buildConfigurationList = DAC1F3F0282A54B900B3B122 /* Build configuration list for PBXNativeTarget "SwiftUI_WebView" */;
 			buildPhases = (
 				DAC1F3DE282A54B800B3B122 /* Sources */,
 				DAC1F3DF282A54B800B3B122 /* Frameworks */,
@@ -82,9 +91,9 @@
 			);
 			dependencies = (
 			);
-			name = SwiftUI_Webview;
+			name = SwiftUI_WebView;
 			productName = SwiftUI_Webview;
-			productReference = DAC1F3E2282A54B800B3B122 /* SwiftUI_Webview.app */;
+			productReference = DAC1F3E2282A54B800B3B122 /* SwiftUI_WebView.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +111,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DAC1F3DD282A54B800B3B122 /* Build configuration list for PBXProject "SwiftUI_Webview" */;
+			buildConfigurationList = DAC1F3DD282A54B800B3B122 /* Build configuration list for PBXProject "SwiftUI_WebView" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +124,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DAC1F3E1282A54B800B3B122 /* SwiftUI_Webview */,
+				DAC1F3E1282A54B800B3B122 /* SwiftUI_WebView */,
 			);
 		};
 /* End PBXProject section */
@@ -137,8 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAC1F3F4282A58DE00B3B122 /* WebView.swift in Sources */,
 				DAC1F3E8282A54B800B3B122 /* ContentView.swift in Sources */,
-				DAC1F3E6282A54B800B3B122 /* SwiftUI_WebviewApp.swift in Sources */,
+				DAC1F3F6282A78A800B3B122 /* MyTextAlertView.swift in Sources */,
+				DAC1F3F8282AAABF00B3B122 /* WebViewModel.swift in Sources */,
+				DAC1F3E6282A54B800B3B122 /* SwiftUI_WebViewApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,12 +287,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.developer119.SwiftUI-Webview";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.developer119.SwiftUI-WebView";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -304,12 +317,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.developer119.SwiftUI-Webview";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.developer119.SwiftUI-WebView";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -320,7 +334,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DAC1F3DD282A54B800B3B122 /* Build configuration list for PBXProject "SwiftUI_Webview" */ = {
+		DAC1F3DD282A54B800B3B122 /* Build configuration list for PBXProject "SwiftUI_WebView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DAC1F3EE282A54B900B3B122 /* Debug */,
@@ -329,7 +343,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DAC1F3F0282A54B900B3B122 /* Build configuration list for PBXNativeTarget "SwiftUI_Webview" */ = {
+		DAC1F3F0282A54B900B3B122 /* Build configuration list for PBXNativeTarget "SwiftUI_WebView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DAC1F3F1282A54B900B3B122 /* Debug */,
