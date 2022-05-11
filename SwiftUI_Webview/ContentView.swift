@@ -4,6 +4,7 @@ struct ContentView: View {
     @EnvironmentObject private var webviewModel: WebViewModel
     @State var textString = ""
     @State var shouldShowAlert = false
+    @State var webTitle: String = ""
     
     var body: some View {
         NavigationView{
@@ -12,7 +13,7 @@ struct ContentView: View {
                     WebView(urlToLoad: "https://developer119korea.github.io/simple_js_alert")
                     webViewBottomTabbar
                 }
-                .navigationTitle(Text("Webview"))
+                .navigationTitle(Text(webTitle))
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) { siteMenu }
@@ -27,6 +28,10 @@ struct ContentView: View {
                 }
                 if self.shouldShowAlert { createTextAlert() }
             }
+            .onReceive(webviewModel.webSiteTitleSubject, perform: { receiveWebTitle in
+                print("ContentView - webTitle: ", receiveWebTitle)
+                self.webTitle = receiveWebTitle
+            })
         }
     }
     

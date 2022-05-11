@@ -84,6 +84,15 @@ extension WebView.Coordinator : WKNavigationDelegate {
     }
 
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        webView.evaluateJavaScript("document.title") { (response, error) in
+            if let error = error {
+                print("document title error : \(error)")
+            }
+            if let title = response as? String {
+                self.webview.viewModel.webSiteTitleSubject.send(title)
+            }
+        }
+
         self.webview
             .viewModel
             .changeUrlSubject
