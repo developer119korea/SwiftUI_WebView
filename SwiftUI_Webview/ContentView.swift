@@ -4,6 +4,7 @@ struct ContentView: View {
     @EnvironmentObject private var webviewModel: WebViewModel
     @State var textString = ""
     @State var shouldShowAlert = false
+    @State var isLoading = false
     @State var webTitle: String = ""
     @State var jsAlert: JsAlert?
     
@@ -31,6 +32,7 @@ struct ContentView: View {
                     createAlert(alert)
                 })
                 if self.shouldShowAlert { createTextAlert() }
+                if self.isLoading { LoadingScreenView() }
             }
             .onReceive(webviewModel.webSiteTitleSubject, perform: { receiveWebTitle in
                 print("ContentView - webTitle: ", receiveWebTitle)
@@ -39,6 +41,10 @@ struct ContentView: View {
             .onReceive(webviewModel.jsAlertEvent, perform: { jsAlert in
                 print("ContentView - jsAlert: ", jsAlert)
                 self.jsAlert = jsAlert
+            })
+            .onReceive(webviewModel.shouldShowIndicator, perform: { isLoading in
+                print("ContentView - isLoading: ", isLoading)
+                self.isLoading = isLoading
             })
         }
     }

@@ -26,4 +26,5 @@ class WebViewModel: ObservableObject {
     var webSiteTitleSubject = PassthroughSubject<String, Never>()
     var nativeToJsEvent = PassthroughSubject<String, Never>()
     var jsAlertEvent = PassthroughSubject<JsAlert, Never>()
+    var shouldShowIndicator = PassthroughSubject<Bool, Never>()
 }

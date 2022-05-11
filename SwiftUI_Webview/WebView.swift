@@ -68,6 +68,8 @@ extension WebView.Coordinator : WKUIDelegate {
 
 extension WebView.Coordinator : WKNavigationDelegate {
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        self.webview.viewModel.shouldShowIndicator.send(true)
+        
         self.webview
             .viewModel
             .webNavigationSubject
@@ -121,6 +123,28 @@ extension WebView.Coordinator : WKNavigationDelegate {
                     }
                 })
             }.store(in: &subscriptions)
+        
+        self.webview.viewModel.shouldShowIndicator.send(false)
+    }
+    
+    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+        print("webView - didCommit")
+        self.webview.viewModel.shouldShowIndicator.send(true)
+    }
+    
+    func webViewWebContentProcessDidTerminate(_ webView: WKWebView) {
+        print("webView - didTerminate")
+        self.webview.viewModel.shouldShowIndicator.send(false)
+    }
+    
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        print("webView - didFail")
+        self.webview.viewModel.shouldShowIndicator.send(false)
+    }
+    
+    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+        print("webView - didFailProvisionalNavigation")
+        self.webview.viewModel.shouldShowIndicator.send(false)
     }
 }
 
@@ -141,4 +165,3 @@ struct MyWebview_Previews: PreviewProvider {
         WebView(urlToLoad: "https://www.naver.com")
     }
 }
- 
