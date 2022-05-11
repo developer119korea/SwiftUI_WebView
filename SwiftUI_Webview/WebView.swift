@@ -62,6 +62,27 @@ extension WebView.Coordinator : WKUIDelegate {
 }
 
 extension WebView.Coordinator : WKNavigationDelegate {
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        self.webview
+            .viewModel
+            .webNavigationSubject
+            .sink{ (action: WEB_NAVIGATION) in
+                print("들어온 네비게이션 액션 : \(action)")
+                switch action {
+                    case .BACK:
+                        if webView.canGoBack {
+                            webView.goBack()
+                        }
+                    case .FORWARD:
+                        if webView.canGoForward {
+                            webView.goForward()
+                        }
+                    case .REFRESH:
+                        webView.reload()
+                }
+            }.store(in: &subscriptions)
+    }
+
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         self.webview
             .viewModel

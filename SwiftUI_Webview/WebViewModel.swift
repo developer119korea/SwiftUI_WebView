@@ -1,10 +1,3 @@
-//
-//  WebViewModel.swift
-//  SwiftUI_Webview
-//
-//  Created by Youngwan Cho on 2022/05/10.
-//
-
 import Foundation
 import Combine
 
@@ -29,4 +22,5 @@ class WebViewModel: ObservableObject {
     }
     
     var changeUrlSubject = PassthroughSubject<WebViewModel.URL_TYPE, Never>()
+    var webNavigationSubject = PassthroughSubject<WEB_NAVIGATION, Never>()
 }
