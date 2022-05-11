@@ -122,7 +122,13 @@ extension WebView.Coordinator : WKNavigationDelegate {
 
 extension WebView.Coordinator : WKScriptMessageHandler {
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-        
+        if message.name == "callbackHandler" {
+            print("JSON 데이터가 웹으로 부터 옴: \(message.body)")
+            if let receivedData: [String: String] = message.body as? Dictionary{
+                print("receivedData: \(receivedData)")
+                self.webview.viewModel.jsAlertEvent.send(JsAlert(receivedData["message"], .JS_BRIDGE))
+            }
+        }
     }
 }
 

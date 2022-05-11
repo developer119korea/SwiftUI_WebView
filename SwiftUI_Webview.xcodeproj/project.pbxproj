@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA3D01F2282B94ED00648342 /* JsAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D01F1282B94ED00648342 /* JsAlert.swift */; };
 		DAC1F3E6282A54B800B3B122 /* SwiftUI_WebViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC1F3E5282A54B800B3B122 /* SwiftUI_WebViewApp.swift */; };
 		DAC1F3E8282A54B800B3B122 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC1F3E7282A54B800B3B122 /* ContentView.swift */; };
 		DAC1F3EA282A54B900B3B122 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAC1F3E9282A54B900B3B122 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA3D01F1282B94ED00648342 /* JsAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JsAlert.swift; path = SwiftUI_WebView/JsAlert.swift; sourceTree = SOURCE_ROOT; };
 		DAC1F3E2282A54B800B3B122 /* SwiftUI_WebView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_WebView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC1F3E5282A54B800B3B122 /* SwiftUI_WebViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_WebViewApp.swift; sourceTree = "<group>"; };
 		DAC1F3E7282A54B800B3B122 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				DAC1F3E5282A54B800B3B122 /* SwiftUI_WebViewApp.swift */,
 				DAC1F3E7282A54B800B3B122 /* ContentView.swift */,
 				DAC1F3F7282AAABF00B3B122 /* WebViewModel.swift */,
+				DA3D01F1282B94ED00648342 /* JsAlert.swift */,
 				DAC1F3F5282A78A800B3B122 /* MyTextAlertView.swift */,
 				DAC1F3F3282A58DE00B3B122 /* WebView.swift */,
 				DAC1F3E9282A54B900B3B122 /* Assets.xcassets */,
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAC1F3F4282A58DE00B3B122 /* WebView.swift in Sources */,
+				DA3D01F2282B94ED00648342 /* JsAlert.swift in Sources */,
 				DAC1F3E8282A54B800B3B122 /* ContentView.swift in Sources */,
 				DAC1F3F6282A78A800B3B122 /* MyTextAlertView.swift in Sources */,
 				DAC1F3F8282AAABF00B3B122 /* WebViewModel.swift in Sources */,

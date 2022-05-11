@@ -25,4 +25,5 @@ class WebViewModel: ObservableObject {
     var webNavigationSubject = PassthroughSubject<WEB_NAVIGATION, Never>()
     var webSiteTitleSubject = PassthroughSubject<String, Never>()
     var nativeToJsEvent = PassthroughSubject<String, Never>()
+    var jsAlertEvent = PassthroughSubject<JsAlert, Never>()
 }
