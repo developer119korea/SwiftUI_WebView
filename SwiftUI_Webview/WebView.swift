@@ -1,6 +1,7 @@
 import SwiftUI
 import WebKit
 import Combine
+import Foundation
 
 struct WebView: UIViewRepresentable {
     @EnvironmentObject var viewModel: WebViewModel
@@ -101,6 +102,21 @@ extension WebView.Coordinator : WKNavigationDelegate {
                 print ("변경된 url : \(changedUrl)")
                 webView.load(URLRequest(url:changedUrl))
             }.store(in: &subscriptions)
+        
+        self.webview
+            .viewModel
+            .nativeToJsEvent
+            .sink{ message in
+                print("didFinish() called / nativeToJsEvent 이벤트 들어옴 / message: \(message)")
+                webView.evaluateJavaScript("nativeToJsEventCall('\(message)');", completionHandler: { (result, error) in
+                    if let result = result {
+                        print("nativeToJs result 성공 : \(result)")
+                    }
+                    if let error = error {
+                        print("nativeToJs result 실패 : \(error)")
+                    }
+                })
+            }.store(in: &subscriptions)
     }
 }
 
@@ -115,3 +131,4 @@ struct MyWebview_Previews: PreviewProvider {
         WebView(urlToLoad: "https://www.naver.com")
     }
 }
+ 

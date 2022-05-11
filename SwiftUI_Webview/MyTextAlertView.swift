@@ -3,6 +3,7 @@ import UIKit
 import SwiftUI
 
 struct MyTextAlertView : UIViewControllerRepresentable {
+    @EnvironmentObject var webViewModel: WebViewModel
     @Binding var textString: String
     @Binding var showAlert: Bool
 
@@ -42,6 +43,7 @@ struct MyTextAlertView : UIViewControllerRepresentable {
             
             uiAlertController.dismiss(animated: true, completion: {
                 print("보내기")
+                self.webViewModel.nativeToJsEvent.send(textString)
                 self.textString = ""
                 self.showAlert = false
             })
